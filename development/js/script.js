@@ -3,10 +3,10 @@
 $(function() {
   console.log('js file is started and DOMs objects is loaded.');
   //end waiting
-  function Button(text) {
+
+  function Button(text, code) {
     this.text = text || 'New Button';
-    $('<button>' + this.text + '</button>');
-    var button = $(document).append(button);
+    this.code = code = $('<button>' + this.text + '</button>');
   }
 
   Button.prototype = {
