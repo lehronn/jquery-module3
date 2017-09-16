@@ -6,7 +6,7 @@ $(function() {
   function Button(text) {
     this.text = text || 'New Button';
     $('<button>' + this.text + '</button>');
-    $(document).append(button);
+    var button = $(document).append(button);
   }
 
   Button.prototype = {
@@ -17,9 +17,9 @@ $(function() {
       this.$element.click(function() {
         alert(self.text);
       });
+      $('body').append(this.$element);
     }
   };
-  $('body').append(this.$element);
 
   var btn1 = new Button('Hello!');
 
