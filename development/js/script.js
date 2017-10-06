@@ -4,9 +4,8 @@ $(function() {
   console.log('js file is started and DOMs objects is loaded.');
   //end waiting
 
-  function Button(text, code) {
+  function Button(text) {
     this.text = text || 'New Button';
-    this.code = code = $('<button>' + this.text + '</button>');
   }
 
   Button.prototype = {
